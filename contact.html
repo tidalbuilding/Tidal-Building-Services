@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Tidal Building Services</title>
-    <meta name="description" content="Get in touch with Tidal Building Services for your free quote. Contact us for professional construction services in Berkshire.">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    
-      <!-- EmailJS SDK (v4+) -->
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-    emailjs.init('Bu-VBajIBdJNyUw0u'); // global variable now available
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Tidal Building Services</title>
+  <meta name="description" content="Get in touch with Tidal Building Services for your free quote. Contact us for professional construction services in Berkshire.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
+  <!-- ✅ EmailJS SDK v4 -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init({
+        publicKey: "Bu-VBajIBdJNyUw0u", // ✅ Your public key
+      });
+    })();
+  </script>
 
-    <link rel="stylesheet" href="styles.css">
-    <script>
-     
-        // Tailwind CSS configuration for custom colors
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#1C3D5A',
-                        secondary: '#F5F1E6',
-                        accent: '#2E8BC0',
-                        muted: '#666666'
-                    }
-                }
-            }
+  <link rel="stylesheet" href="styles.css">
+
+  <script>
+    // Tailwind CSS configuration for custom colors
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1C3D5A',
+            secondary: '#F5F1E6',
+            accent: '#2E8BC0',
+            muted: '#666666'
+          }
         }
-    </script>
+      }
+    }
+  </script>
 </head>
 <body>
     <!-- Header -->

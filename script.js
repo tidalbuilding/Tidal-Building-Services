@@ -87,7 +87,7 @@ function handleFormSubmission(e) {
         'service_wpbnhta',      // Your Service ID
         'template_pa18l34',    // Your Template ID
         form,
-        'wdLxxx5yFUJWNzdt-'     // Your Public Key
+        'Bu-VBajIBdJNyUw0u-'     // Your Public Key
     ).then(() => {
         showNotification('Thank you for your message! We will get back to you within 24 hours.', 'success');
         form.reset();
