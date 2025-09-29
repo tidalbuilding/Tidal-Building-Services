@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Tidal Building Services</title>
+    <meta name="description" content="Professional construction services including tiling, flooring, rendering, painting, gardening, slabbing, and plumbing services.">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Tailwind CSS configuration for custom colors
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1C3D5A',
+                        secondary: '#F5F1E6',
+                        accent: '#2E8BC0',
+                        muted: '#666666'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-[#1C3D5A] shadow-lg fixed w-full top-0 z-50 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-3">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="assets/tidal-logo-white.png" alt="Tidal Building Services" class="h-12 w-auto">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="relative px-4 py-2 transition-all duration-200 rounded-lg hover:bg-white/10 group text-white/90 hover:text-white">
+                        Home
+                        <span class="absolute bottom-0 left-4 right-4 h-0.5 bg-[#2E8BC0] transition-transform duration-200 scale-x-0 group-hover:scale-x-100"></span>
+                    </a>
+                    <a href="services.html" class="relative px-4 py-2 transition-all duration-200 rounded-lg hover:bg-white/10 group text-white bg-white/10">
+                        Services
+                        <span class="absolute bottom-0 left-4 right-4 h-0.5 bg-[#2E8BC0] transition-transform duration-200 scale-x-100"></span>
+                    </a>
+                    <a href="portfolio.html" class="relative px-4 py-2 transition-all duration-200 rounded-lg hover:bg-white/10 group text-white/90 hover:text-white">
+                        Portfolio
+                        <span class="absolute bottom-0 left-4 right-4 h-0.5 bg-[#2E8BC0] transition-transform duration-200 scale-x-0 group-hover:scale-x-100"></span>
+                    </a>
+                    <a href="about.html" class="relative px-4 py-2 transition-all duration-200 rounded-lg hover:bg-white/10 group text-white/90 hover:text-white">
+                        About
+                        <span class="absolute bottom-0 left-4 right-4 h-0.5 bg-[#2E8BC0] transition-transform duration-200 scale-x-0 group-hover:scale-x-100"></span>
+                    </a>
+                    <a href="contact.html" class="relative px-4 py-2 transition-all duration-200 rounded-lg hover:bg-white/10 group text-white/90 hover:text-white">
+                        Contact
+                        <span class="absolute bottom-0 left-4 right-4 h-0.5 bg-[#2E8BC0] transition-transform duration-200 scale-x-0 group-hover:scale-x-100"></span>
+                    </a>
+                </nav>
+
+                <!-- CTA Button & Mobile menu button -->
+                <div class="flex items-center space-x-4">
+                    <a href="contact.html">
+                        <button class="hidden md:inline-flex bg-[#2E8BC0] hover:bg-[#1B6F91] text-white px-6 py-2 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105">
+                            Get Quote
+                        </button>
+                    </a>
+                    
+                    <div class="md:hidden">
+                        <button id="mobile-menu-btn" class="text-white hover:text-[#2E8BC0] hover:bg-white/10 p-2 rounded-lg">
+                            <i data-lucide="menu" class="w-6 h-6"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden py-4 border-t border-white/10">
+                <div class="space-y-2">
+                    <a href="index.html" class="block px-4 py-3 transition-all duration-200 rounded-lg text-white/90 hover:text-white hover:bg-white/10">Home</a>
+                    <a href="services.html" class="block px-4 py-3 transition-all duration-200 rounded-lg text-white bg-white/10">Services</a>
+                    <a href="portfolio.html" class="block px-4 py-3 transition-all duration-200 rounded-lg text-white/90 hover:text-white hover:bg-white/10">Portfolio</a>
+                    <a href="about.html" class="block px-4 py-3 transition-all duration-200 rounded-lg text-white/90 hover:text-white hover:bg-white/10">About</a>
+                    <a href="contact.html" class="block px-4 py-3 transition-all duration-200 rounded-lg text-white/90 hover:text-white hover:bg-white/10">Contact</a>
+                    <div class="pt-2 border-t border-white/10 mt-4">
+                        <a href="contact.html">
+                            <button class="w-full bg-[#2E8BC0] hover:bg-[#1B6F91] text-white py-3 rounded-lg">
+                                Get Quote
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-20 bg-gradient-to-br from-[#F5F1E6] via-white to-[#F5F1E6]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="text-center">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1C3D5A] mb-6">
+                        Our Services
+                    </h1>
+                    <p class="text-xl text-[#666666] max-w-3xl mx-auto">
+                        Comprehensive construction services tailored to meet all your building and renovation needs with over 15 years of expertise.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-[#1C3D5A] mb-4">
+                        Complete Construction Solutions
+                    </h2>
+                    <p class="text-lg text-[#666666] max-w-3xl mx-auto">
+                        From new builds to renovations, we provide comprehensive construction services with professional expertise and quality craftsmanship.
+                    </p>
+                </div>
+
+                <!-- Main Services Categories -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Construction & Building -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
+                        <img src="images/services/building.jpg" alt="Construction & Building Services" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-[#E6F3F9] rounded-lg flex items-center justify-center mr-4">
+                                    <i data-lucide="building" class="w-6 h-6 text-[#2E8BC0]"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-[#1C3D5A]">Construction & Building</h3>
+                            </div>
+                            <ul class="space-y-2 mb-6 text-sm">
+                                <li class="flex items-center text-[#666666]">
+                                    <i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2 flex-shrink-0"></i>
+                                    New Builds
+                                </li>
+                                <li class="flex items-center text-[#666666]">
+                                    <i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2 flex-shrink-0"></i>
+                                    Loft Conversions
+                                </li>
+                                <li class="flex items-center text-[#666666]">
+                                    <i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2 flex-shrink-0"></i>
+                                    Side Extensions
+                                </li>
+                                <li class="flex items-center text-[#666666]">
+                                    <i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2 flex-shrink-0"></i>
+                                    Bedroom Modifications
+                                </li>
+                                <li class="flex items-center text-[#666666]">
+                                    <i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2 flex-shrink-0"></i>
+                                    Brick Works
+                                </li>
+                            </ul>
+                            <a href="contact.html">
+                                <button class="bg-[#2E8BC0] hover:bg-[#1B6F91] text-white px-4 py-2 rounded-lg transition-colors text-sm">
+                                    Get Quote
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Interior Services -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
+                        <img src="images/services/interior.jpg" alt="Interior Services" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-[#E6F3F9] rounded-lg flex items-center justify-center mr-4">
+                                    <i data-lucide="home" class="w-6 h-6 text-[#2E8BC0]"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-[#1C3D5A]">Interior Services</h3>
+                            </div>
+                            <ul class="space-y-2 mb-6 text-sm">
+                                <li class="flex items-center text-[#666666]">
+                                    <i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2 flex-shrink-0"></i>
+                                    Tiling & Flooring
+                                </li>
+                                <li class="flex items-center text-[#666666]">
+                                    <i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2 flex-shrink-0"></i>
+                                    Painting & Decorating
+                                </li>
+                                <li class="flex items-center text-[#666666]">
+                                    <i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2 flex-shrink-0"></i>
+                                    Skimming & Plastering
+                                </li>
+                                <li class="flex items-center text-[#666666]">
+                                    <i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2 flex-shrink-0"></i>
+                                    Window & Door Installations
+                                </li>
+                                <li class="flex items-center text-[#666666]">
+                                    <i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2 flex-shrink-0"></i>
+                                    Plumbing & Electrics
+                                </li>
+                            </ul>
+                            <a href="contact.html">
+                                <button class="bg-[#2E8BC0] hover:bg-[#1B6F91] text-white px-4 py-2 rounded-lg transition-colors text-sm">
+                                    Get Quote
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Exterior Services -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
+                        <img src="images/services/exterior.jpg" alt="Exterior Services" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-[#E6F3F9] rounded-lg flex items-center justify-center mr-4">
+                                    <i data-lucide="trees" class="w-6 h-6 text-[#2E8BC0]"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-[#1C3D5A]">Exterior Services</h3>
+                            </div>
+                            <ul class="space-y-2 mb-6 text-sm">
+                                <li class="flex items-center text-[#666666]">
+                                    <i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2 flex-shrink-0"></i>
+                                    Rendering & External Finishes
+                                </li>
+                                <li class="flex items-center text-[#666666]">
+                                    <i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2 flex-shrink-0"></i>
+                                    Driveways & Patios
+                                </li>
+                                <li class="flex items-center text-[#666666]">
+                                    <i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2 flex-shrink-0"></i>
+                                    Gardening & Landscaping
+                                </li>
+                                <li class="flex items-center text-[#666666]">
+                                    <i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2 flex-shrink-0"></i>
+                                    Concrete Pouring
+                                </li>
+                                <li class="flex items-center text-[#666666]">
+                                    <i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2 flex-shrink-0"></i>
+                                    Design & Planning
+                                </li>
+                            </ul>
+                            <a href="contact.html">
+                                <button class="bg-[#2E8BC0] hover:bg-[#1B6F91] text-white px-4 py-2 rounded-lg transition-colors text-sm">
+                                    Get Quote
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Services Section -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-[#1C3D5A] mb-4">
+                        Our Complete Services
+                    </h2>
+                    <p class="text-lg text-[#666666] max-w-3xl mx-auto">
+                        With over 15 years of experience, we provide comprehensive construction and building services across all trades with professional expertise and quality craftsmanship.
+                    </p>
+                </div>
+
+                <!-- Individual Service Cards with Details -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- New Builds -->
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                        <div class="relative">
+                            <img src="images/services/new.jpg" alt="New Build Construction" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <div class="w-12 h-12 bg-[#2E8BC0] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="building" class="w-6 h-6 text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#1C3D5A] mb-3">New Builds</h3>
+                            <p class="text-[#666666] mb-4 text-sm leading-relaxed">
+                                Complete new construction projects from foundation to finish. We handle residential and commercial builds with full project management, ensuring quality construction that meets all building regulations.
+                            </p>
+                            <ul class="text-xs text-[#666666] mb-4 space-y-1">
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Foundation work</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Full structural construction</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Project management</li>
+                            </ul>
+                            <a href="contact.html" class="inline-flex items-center text-[#2E8BC0] font-medium hover:text-[#1B6F91] transition-colors text-sm">
+                                Get Quote <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Loft Conversions -->
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                        <div class="relative">
+                            <img src="images/services/loft.jpg" alt="Loft Conversion" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <div class="w-12 h-12 bg-[#2E8BC0] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="home" class="w-6 h-6 text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#1C3D5A] mb-3">Loft Conversions</h3>
+                            <p class="text-[#666666] mb-4 text-sm leading-relaxed">
+                                Transform unused loft space into functional living areas. We create bedrooms, home offices, or entertainment spaces with proper insulation, lighting, and ventilation.
+                            </p>
+                            <ul class="text-xs text-[#666666] mb-4 space-y-1">
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Dormer windows</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Structural alterations</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Building regulations compliance</li>
+                            </ul>
+                            <a href="contact.html" class="inline-flex items-center text-[#2E8BC0] font-medium hover:text-[#1B6F91] transition-colors text-sm">
+                                Get Quote <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Side Extensions -->
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                        <div class="relative">
+                            <img src="images/services/side.jpg" alt="House Extension" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <div class="w-12 h-12 bg-[#2E8BC0] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="square-plus" class="w-6 h-6 text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#1C3D5A] mb-3">Side Extensions</h3>
+                            <p class="text-[#666666] mb-4 text-sm leading-relaxed">
+                                Expand your living space with expertly designed and constructed side extensions. We handle planning permission, structural work, and complete integration with existing property.
+                            </p>
+                            <ul class="text-xs text-[#666666] mb-4 space-y-1">
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Single & double-story extensions</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Planning permission support</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Seamless integration</li>
+                            </ul>
+                            <a href="contact.html" class="inline-flex items-center text-[#2E8BC0] font-medium hover:text-[#1B6F91] transition-colors text-sm">
+                                Get Quote <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Brick Works -->
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                        <div class="relative">
+                            <img src="images/services/brick.jpg" alt="Brick Work" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <div class="w-12 h-12 bg-[#2E8BC0] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="brick-wall" class="w-6 h-6 text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#1C3D5A] mb-3">Brick Works</h3>
+                            <p class="text-[#666666] mb-4 text-sm leading-relaxed">
+                                Professional bricklaying services for new builds, extensions, and repairs. We work with all types of bricks and blocks, ensuring strong, durable, and aesthetically pleasing results.
+                            </p>
+                            <ul class="text-xs text-[#666666] mb-4 space-y-1">
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>New construction brickwork</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Brick repairs & repointing</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Feature walls & garden walls</li>
+                            </ul>
+                            <a href="contact.html" class="inline-flex items-center text-[#2E8BC0] font-medium hover:text-[#1B6F91] transition-colors text-sm">
+                                Get Quote <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tiling & Flooring -->
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                        <div class="relative">
+                            <img src="images/services/floor.png" alt="Tiling & Flooring" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <div class="w-12 h-12 bg-[#2E8BC0] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="square" class="w-6 h-6 text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#1C3D5A] mb-3">Tiling & Flooring</h3>
+                            <p class="text-[#666666] mb-4 text-sm leading-relaxed">
+                                Expert installation of ceramic, porcelain, natural stone tiles, and all types of flooring including hardwood, laminate, luxury vinyl, and engineered flooring solutions.
+                            </p>
+                            <ul class="text-xs text-[#666666] mb-4 space-y-1">
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Bathroom & kitchen tiling</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Hardwood & laminate flooring</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Floor preparation & screeding</li>
+                            </ul>
+                            <a href="contact.html" class="inline-flex items-center text-[#2E8BC0] font-medium hover:text-[#1B6F91] transition-colors text-sm">
+                                Get Quote <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Gardening -->
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                        <div class="relative">
+                            <img src="images/services/garden-1.png" alt="Gardening Services" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <div class="w-12 h-12 bg-[#2E8BC0] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="flower" class="w-6 h-6 text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#1C3D5A] mb-3">Gardening</h3>
+                            <p class="text-[#666666] mb-4 text-sm leading-relaxed">
+                                Complete garden design and maintenance services including landscaping, lawn care, planting, tree work, and regular garden maintenance to keep your outdoor space looking its best.
+                            </p>
+                            <ul class="text-xs text-[#666666] mb-4 space-y-1">
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Garden design & landscaping</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Lawn care & maintenance</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Tree & shrub work</li>
+                            </ul>
+                            <a href="contact.html" class="inline-flex items-center text-[#2E8BC0] font-medium hover:text-[#1B6F91] transition-colors text-sm">
+                                Get Quote <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Bedroom Modifications -->
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                        <div class="relative">
+                            <img src="images/services/bedroom.jpeg" alt="Bedroom Modifications" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <div class="w-12 h-12 bg-[#2E8BC0] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="bed" class="w-6 h-6 text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#1C3D5A] mb-3">Bedroom Modifications</h3>
+                            <p class="text-[#666666] mb-4 text-sm leading-relaxed">
+                                Transform and modify bedrooms including built-in wardrobes, en-suite installations, room divisions, and complete bedroom renovations to create the perfect sleeping space.
+                            </p>
+                            <ul class="text-xs text-[#666666] mb-4 space-y-1">
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Built-in wardrobes & storage</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>En-suite installations</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Room layout changes</li>
+                            </ul>
+                            <a href="contact.html" class="inline-flex items-center text-[#2E8BC0] font-medium hover:text-[#1B6F91] transition-colors text-sm">
+                                Get Quote <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Painting -->
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                        <div class="relative">
+                            <img src="images/services/painting.jpg" alt="Painting Services" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <div class="w-12 h-12 bg-[#2E8BC0] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="paintbrush-2" class="w-6 h-6 text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#1C3D5A] mb-3">Painting</h3>
+                            <p class="text-[#666666] mb-4 text-sm leading-relaxed">
+                                Professional interior and exterior painting services using premium materials. We provide surface preparation, priming, and expert application for lasting, beautiful results.
+                            </p>
+                            <ul class="text-xs text-[#666666] mb-4 space-y-1">
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Interior wall & ceiling painting</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Exterior house painting</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Surface preparation & priming</li>
+                            </ul>
+                            <a href="contact.html" class="inline-flex items-center text-[#2E8BC0] font-medium hover:text-[#1B6F91] transition-colors text-sm">
+                                Get Quote <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Wall Decoration -->
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                        <div class="relative">
+                            <img src="images/services/wall.jpg" alt="Wall Decoration" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <div class="w-12 h-12 bg-[#2E8BC0] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="palette" class="w-6 h-6 text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#1C3D5A] mb-3">Wall Decoration</h3>
+                            <p class="text-[#666666] mb-4 text-sm leading-relaxed">
+                                Expert wallpapering, decorative finishes, and wall treatments. We create stunning feature walls, apply textured finishes, and provide complete decorating solutions.
+                            </p>
+                            <ul class="text-xs text-[#666666] mb-4 space-y-1">
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Wallpaper hanging</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Decorative finishes</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Feature wall creation</li>
+                            </ul>
+                            <a href="contact.html" class="inline-flex items-center text-[#2E8BC0] font-medium hover:text-[#1B6F91] transition-colors text-sm">
+                                Get Quote <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Driveways -->
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                        <div class="relative">
+                            <img src="images/services/driveway.jpg" alt="Driveway Installation" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <div class="w-12 h-12 bg-[#2E8BC0] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="car" class="w-6 h-6 text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#1C3D5A] mb-3">Driveways</h3>
+                            <p class="text-[#666666] mb-4 text-sm leading-relaxed">
+                                Complete driveway installation and renovation using block paving, concrete, tarmac, and gravel. We handle excavation, proper drainage, and durable surface installation.
+                            </p>
+                            <ul class="text-xs text-[#666666] mb-4 space-y-1">
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Block paving driveways</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Concrete & tarmac surfaces</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Drainage & sub-base work</li>
+                            </ul>
+                            <a href="contact.html" class="inline-flex items-center text-[#2E8BC0] font-medium hover:text-[#1B6F91] transition-colors text-sm">
+                                Get Quote <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Patios -->
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                        <div class="relative">
+                            <img src="images/services/patio.jpg" alt="Patio Installation" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <div class="w-12 h-12 bg-[#2E8BC0] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="table" class="w-6 h-6 text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#1C3D5A] mb-3">Patios</h3>
+                            <p class="text-[#666666] mb-4 text-sm leading-relaxed">
+                                Beautiful patio construction using natural stone, concrete slabs, and decorative paving. We create outdoor living spaces perfect for entertaining and relaxation.
+                            </p>
+                            <ul class="text-xs text-[#666666] mb-4 space-y-1">
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Natural stone patios</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Concrete slab installation</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Pattern & design work</li>
+                            </ul>
+                            <a href="contact.html" class="inline-flex items-center text-[#2E8BC0] font-medium hover:text-[#1B6F91] transition-colors text-sm">
+                                Get Quote <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Skimming -->
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                        <div class="relative">
+                            <img src="images/services/skimming.jpg
+                            " alt="Skimming & Plastering" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <div class="w-12 h-12 bg-[#2E8BC0] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="layers" class="w-6 h-6 text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#1C3D5A] mb-3">Skimming</h3>
+                            <p class="text-[#666666] mb-4 text-sm leading-relaxed">
+                                Professional skimming and plastering services for smooth, perfect wall and ceiling finishes. We repair damaged plaster and create flawless surfaces ready for decoration.
+                            </p>
+                            <ul class="text-xs text-[#666666] mb-4 space-y-1">
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Wall & ceiling skimming</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Plaster repairs</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Artex removal</li>
+                            </ul>
+                            <a href="contact.html" class="inline-flex items-center text-[#2E8BC0] font-medium hover:text-[#1B6F91] transition-colors text-sm">
+                                Get Quote <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Rendering -->
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                        <div class="relative">
+                            <img src="images/services/rendering.jpg" alt="External Rendering" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <div class="w-12 h-12 bg-[#2E8BC0] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="brush" class="w-6 h-6 text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#1C3D5A] mb-3">Rendering</h3>
+                            <p class="text-[#666666] mb-4 text-sm leading-relaxed">
+                                External rendering services to protect and beautify your property. We use modern render systems, traditional materials, and provide complete weatherproofing solutions.
+                            </p>
+                            <ul class="text-xs text-[#666666] mb-4 space-y-1">
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>External wall rendering</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Render repairs</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Insulated render systems</li>
+                            </ul>
+                            <a href="contact.html" class="inline-flex items-center text-[#2E8BC0] font-medium hover:text-[#1B6F91] transition-colors text-sm">
+                                Get Quote <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Plumbing -->
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                        <div class="relative">
+                            <img src="images/services/plumbing.jpg" alt="Plumbing Services" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <div class="w-12 h-12 bg-[#2E8BC0] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="wrench" class="w-6 h-6 text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#1C3D5A] mb-3">Plumbing</h3>
+                            <p class="text-[#666666] mb-4 text-sm leading-relaxed">
+                                Complete plumbing services including installation, repairs, and maintenance. From emergency leaks to full bathroom installations, we handle all your plumbing needs professionally.
+                            </p>
+                            <ul class="text-xs text-[#666666] mb-4 space-y-1">
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Emergency repairs</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Bathroom installations</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Pipe work & fitting</li>
+                            </ul>
+                            <a href="contact.html" class="inline-flex items-center text-[#2E8BC0] font-medium hover:text-[#1B6F91] transition-colors text-sm">
+                                Get Quote <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Electrics -->
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                        <div class="relative">
+                            <img src="images/services/electric.jpg" alt="Electrical Services" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <div class="w-12 h-12 bg-[#2E8BC0] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="zap" class="w-6 h-6 text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#1C3D5A] mb-3">Electrics</h3>
+                            <p class="text-[#666666] mb-4 text-sm leading-relaxed">
+                                Professional electrical installations and repairs by certified electricians. We handle rewiring, new installations, fault finding, and all electrical work to current regulations.
+                            </p>
+                            <ul class="text-xs text-[#666666] mb-4 space-y-1">
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>House rewiring</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>New installations</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Safety testing & certification</li>
+                            </ul>
+                            <a href="contact.html" class="inline-flex items-center text-[#2E8BC0] font-medium hover:text-[#1B6F91] transition-colors text-sm">
+                                Get Quote <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Concrete Pouring -->
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                        <div class="relative">
+                            <img src="images/services/concrete.jpg" alt="Concrete Pouring" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <div class="w-12 h-12 bg-[#2E8BC0] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="circle-dot" class="w-6 h-6 text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#1C3D5A] mb-3">Concrete Pouring</h3>
+                            <p class="text-[#666666] mb-4 text-sm leading-relaxed">
+                                Professional concrete work for foundations, floors, driveways, and structural elements. We ensure proper mixing, pouring, and curing for durable, long-lasting results.
+                            </p>
+                            <ul class="text-xs text-[#666666] mb-4 space-y-1">
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Foundation concrete</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Floor screeds</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Decorative concrete finishes</li>
+                            </ul>
+                            <a href="contact.html" class="inline-flex items-center text-[#2E8BC0] font-medium hover:text-[#1B6F91] transition-colors text-sm">
+                                Get Quote <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Design and Planning -->
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                        <div class="relative">
+                            <img src="images/services/design.jpg" alt="Design & Planning" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <div class="w-12 h-12 bg-[#2E8BC0] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="drafting-compass" class="w-6 h-6 text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#1C3D5A] mb-3">Design & Planning</h3>
+                            <p class="text-[#666666] mb-4 text-sm leading-relaxed">
+                                Comprehensive design and planning services from initial concept to detailed construction drawings. We help bring your vision to life with professional design expertise.
+                            </p>
+                            <ul class="text-xs text-[#666666] mb-4 space-y-1">
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Architectural drawings</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Project planning</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>3D visualizations</li>
+                            </ul>
+                            <a href="contact.html" class="inline-flex items-center text-[#2E8BC0] font-medium hover:text-[#1B6F91] transition-colors text-sm">
+                                Get Quote <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Window and Door Installations -->
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                        <div class="relative">
+                            <img src="images/services/windows.jpg" alt="Window & Door Installation" class="w-full h-64 object-cover">
+                            <div class="absolute top-4 left-4">
+                                <div class="w-12 h-12 bg-[#2E8BC0] rounded-lg flex items-center justify-center">
+                                    <i data-lucide="door-open" class="w-6 h-6 text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#1C3D5A] mb-3">Windows & Doors</h3>
+                            <p class="text-[#666666] mb-4 text-sm leading-relaxed">
+                                Professional installation of windows and doors including UPVC, timber, and composite options. We ensure perfect fit, proper sealing, and excellent energy efficiency.
+                            </p>
+                            <ul class="text-xs text-[#666666] mb-4 space-y-1">
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>UPVC & timber windows</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>Front & back door installation</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-3 h-3 text-[#2E8BC0] mr-2"></i>French doors & patio doors</li>
+                            </ul>
+                            <a href="contact.html" class="inline-flex items-center text-[#2E8BC0] font-medium hover:text-[#1B6F91] transition-colors text-sm">
+                                Get Quote <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Contracts Section -->
+        <section class="py-16 bg-[#F5F1E6]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-[#1C3D5A] mb-4">
+                        Additional Contract Services
+                    </h2>
+                    <p class="text-lg text-[#666666]">
+                        We also provide specialized contract services for ongoing and large-scale projects
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Property Maintenance -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-2xl transition-all duration-300">
+                        <div class="w-16 h-16 bg-[#E6F3F9] rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="settings" class="w-8 h-8 text-[#2E8BC0]"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#1C3D5A] mb-4">Property Maintenance</h3>
+                        <p class="text-[#666666] mb-6 leading-relaxed">
+                            Ongoing maintenance contracts for residential and commercial properties. Regular inspections, preventive maintenance, and responsive repair services to keep your property in perfect condition.
+                        </p>
+                        <ul class="text-sm text-[#666666] mb-6 space-y-2 text-left">
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2"></i>Planned preventive maintenance</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2"></i>Emergency repair callouts</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2"></i>Multi-trade maintenance</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2"></i>Regular property inspections</li>
+                        </ul>
+                        <a href="contact.html">
+                            <button class="bg-[#2E8BC0] hover:bg-[#1B6F91] text-white px-6 py-3 rounded-lg transition-colors">
+                                Get Maintenance Quote
+                            </button>
+                        </a>
+                    </div>
+
+                    <!-- Property Renovations -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-2xl transition-all duration-300">
+                        <div class="w-16 h-16 bg-[#E6F3F9] rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="home" class="w-8 h-8 text-[#2E8BC0]"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#1C3D5A] mb-4">Property Renovations</h3>
+                        <p class="text-[#666666] mb-6 leading-relaxed">
+                            Complete property renovation projects from concept to completion. We handle full house refurbishments, commercial renovations, and restoration projects with expert project management.
+                        </p>
+                        <ul class="text-sm text-[#666666] mb-6 space-y-2 text-left">
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2"></i>Full house renovations</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2"></i>Commercial refurbishments</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2"></i>Heritage restoration</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2"></i>Project management</li>
+                        </ul>
+                        <a href="contact.html">
+                            <button class="bg-[#2E8BC0] hover:bg-[#1B6F91] text-white px-6 py-3 rounded-lg transition-colors">
+                                Get Renovation Quote
+                            </button>
+                        </a>
+                    </div>
+
+                    <!-- Architectural & Planning -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-2xl transition-all duration-300">
+                        <div class="w-16 h-16 bg-[#E6F3F9] rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="clipboard-list" class="w-8 h-8 text-[#2E8BC0]"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#1C3D5A] mb-4">Architectural & Planning</h3>
+                        <p class="text-[#666666] mb-6 leading-relaxed">
+                            Professional architectural services and planning permission assistance. We help navigate the planning process, create detailed drawings, and ensure compliance with all regulations.
+                        </p>
+                        <ul class="text-sm text-[#666666] mb-6 space-y-2 text-left">
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2"></i>Planning permission applications</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2"></i>Architectural drawings</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2"></i>Building regulations approval</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-[#2E8BC0] mr-2"></i>Structural calculations</li>
+                        </ul>
+                        <a href="contact.html">
+                            <button class="bg-[#2E8BC0] hover:bg-[#1B6F91] text-white px-6 py-3 rounded-lg transition-colors">
+                                Get Planning Quote
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-[#F5F1E6]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-[#1C3D5A] mb-4">
+                    Ready to Start Your Project?
+                </h2>
+                <p class="text-lg text-[#666666] mb-8 max-w-2xl mx-auto">
+                    Get in touch with us today for a free consultation and competitive quote tailored to your specific needs.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html">
+                        <button class="bg-[#2E8BC0] hover:bg-[#1B6F91] text-white px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105">
+                            Get Free Quote
+                        </button>
+                    </a>
+                    <a href="tel:+447405587492">
+                        <button class="border-2 border-[#1C3D5A] text-[#1C3D5A] hover:bg-[#1C3D5A] hover:text-white px-8 py-4 rounded-xl transition-all duration-200">
+                            Call Now: +44 7405587492
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1C3D5A] text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="lg:col-span-2">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">
+                            Tidal Building Services
+                        </h3>
+                        <p class="text-white/80 mb-4">
+                            tidalbuildingservices.ltd
+                        </p>
+                        <p class="text-white/90 leading-relaxed">
+                            Unmatched quality at affordable prices. We are your everyday partner 
+                            for all construction and building service needs.
+                        </p>
+                    </div>
+
+                    <div class="mb-6">
+                        <p class="text-white/80 mb-4">
+                            Follow us on the below platforms to support us with valuable reviews:
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/profile.php?id=61578989883464" aria-label="Facebook" class="w-10 h-10 bg-[#2E8BC0] rounded-full flex items-center justify-center hover:bg-[#1B6F91] transition-colors duration-200">
+                                <i data-lucide="facebook" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" aria-label="Twitter" class="w-10 h-10 bg-[#2E8BC0] rounded-full flex items-center justify-center hover:bg-[#1B6F91] transition-colors duration-200">
+                                <i data-lucide="twitter" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" aria-label="Instagram" class="w-10 h-10 bg-[#2E8BC0] rounded-full flex items-center justify-center hover:bg-[#1B6F91] transition-colors duration-200">
+                                <i data-lucide="instagram" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" aria-label="LinkedIn" class="w-10 h-10 bg-[#2E8BC0] rounded-full flex items-center justify-center hover:bg-[#1B6F91] transition-colors duration-200">
+                                <i data-lucide="linkedin" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Explore Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Explore Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">Our Services</a></li>
+                        <li><a href="about.html" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">About Us</a></li>
+                        <li><a href="portfolio.html" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">Portfolio</a></li>
+                        <li><a href="contact.html" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">Contact Us</a></li>
+                        <li><a href="privacy-policy.html" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Contact Us</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-[#2E8BC0] mt-1 flex-shrink-0"></i>
+                            <p class="text-white/80">
+                                11A, Cedarway<br>
+                                Slough SL3 7JX
+                            </p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-[#2E8BC0] flex-shrink-0"></i>
+                            <a href="mailto:info@tidalbuildingservices.com" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">
+                                info@tidalbuildingservices.com
+                            </a>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-[#2E8BC0] flex-shrink-0"></i>
+                            <a href="tel:+447405587492" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">
+                                +44 7405587492
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-white/80 text-sm">
+                    Copyright ©2024 | Developed by BIZiWEB
+                </p>
+                <p class="text-white/70 text-sm mt-2 md:mt-0">
+                    Made with ❤️ in the UK
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

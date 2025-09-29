@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Tidal Building Services</title>
+    <meta name="description" content="Get in touch with Tidal Building Services for your free quote. Contact us for professional construction services in Berkshire.">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+      <!-- EmailJS SDK (v4+) -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    emailjs.init('Bu-VBajIBdJNyUw0u'); // global variable now available
+</script>
+
+
+    <link rel="stylesheet" href="styles.css">
+    <script>
+     
+        // Tailwind CSS configuration for custom colors
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1C3D5A',
+                        secondary: '#F5F1E6',
+                        accent: '#2E8BC0',
+                        muted: '#666666'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-[#1C3D5A] shadow-lg fixed w-full top-0 z-50 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-3">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="assets/tidal-logo-white.png" alt="Tidal Building Services" class="h-12 w-auto">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="relative px-4 py-2 transition-all duration-200 rounded-lg hover:bg-white/10 group text-white/90 hover:text-white">
+                        Home
+                        <span class="absolute bottom-0 left-4 right-4 h-0.5 bg-[#2E8BC0] transition-transform duration-200 scale-x-0 group-hover:scale-x-100"></span>
+                    </a>
+                    <a href="services.html" class="relative px-4 py-2 transition-all duration-200 rounded-lg hover:bg-white/10 group text-white/90 hover:text-white">
+                        Services
+                        <span class="absolute bottom-0 left-4 right-4 h-0.5 bg-[#2E8BC0] transition-transform duration-200 scale-x-0 group-hover:scale-x-100"></span>
+                    </a>
+                    <a href="portfolio.html" class="relative px-4 py-2 transition-all duration-200 rounded-lg hover:bg-white/10 group text-white/90 hover:text-white">
+                        Portfolio
+                        <span class="absolute bottom-0 left-4 right-4 h-0.5 bg-[#2E8BC0] transition-transform duration-200 scale-x-0 group-hover:scale-x-100"></span>
+                    </a>
+                    <a href="about.html" class="relative px-4 py-2 transition-all duration-200 rounded-lg hover:bg-white/10 group text-white/90 hover:text-white">
+                        About
+                        <span class="absolute bottom-0 left-4 right-4 h-0.5 bg-[#2E8BC0] transition-transform duration-200 scale-x-0 group-hover:scale-x-100"></span>
+                    </a>
+                    <a href="contact.html" class="relative px-4 py-2 transition-all duration-200 rounded-lg hover:bg-white/10 group text-white bg-white/10">
+                        Contact
+                        <span class="absolute bottom-0 left-4 right-4 h-0.5 bg-[#2E8BC0] transition-transform duration-200 scale-x-100"></span>
+                    </a>
+                </nav>
+
+                <!-- CTA Button & Mobile menu button -->
+                <div class="flex items-center space-x-4">
+                    <a href="contact.html">
+                        <button class="hidden md:inline-flex bg-[#2E8BC0] hover:bg-[#1B6F91] text-white px-6 py-2 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105">
+                            Get Quote
+                        </button>
+                    </a>
+                    
+                    <div class="md:hidden">
+                        <button id="mobile-menu-btn" class="text-white hover:text-[#2E8BC0] hover:bg-white/10 p-2 rounded-lg">
+                            <i data-lucide="menu" class="w-6 h-6"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden py-4 border-t border-white/10">
+                <div class="space-y-2">
+                    <a href="index.html" class="block px-4 py-3 transition-all duration-200 rounded-lg text-white/90 hover:text-white hover:bg-white/10">Home</a>
+                    <a href="services.html" class="block px-4 py-3 transition-all duration-200 rounded-lg text-white/90 hover:text-white hover:bg-white/10">Services</a>
+                    <a href="portfolio.html" class="block px-4 py-3 transition-all duration-200 rounded-lg text-white/90 hover:text-white hover:bg-white/10">Portfolio</a>
+                    <a href="about.html" class="block px-4 py-3 transition-all duration-200 rounded-lg text-white/90 hover:text-white hover:bg-white/10">About</a>
+                    <a href="contact.html" class="block px-4 py-3 transition-all duration-200 rounded-lg text-white bg-white/10">Contact</a>
+                    <div class="pt-2 border-t border-white/10 mt-4">
+                        <a href="contact.html">
+                            <button class="w-full bg-[#2E8BC0] hover:bg-[#1B6F91] text-white py-3 rounded-lg">
+                                Get Quote
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-20 bg-gradient-to-br from-[#F5F1E6] via-white to-[#F5F1E6]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="text-center">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1C3D5A] mb-6">
+                        Get Your Free Quote Today
+                    </h1>
+                    <p class="text-xl text-[#666666] max-w-3xl mx-auto mb-8">
+                        Ready to start your construction project? We're here to help. Get in touch for a free consultation and competitive quote.
+                    </p>
+                    <div class="inline-flex items-center px-4 py-2 bg-[#E6F3F9] rounded-full text-[#2E8BC0] font-medium">
+                        <i data-lucide="clock" class="w-4 h-4 mr-2"></i>
+                        Response within 24 hours guaranteed
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Information Cards -->
+        <section class="py-12 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center p-8  rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
+                        <div class="w-16 h-16 bg-[#2E8BC0] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="phone" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#1C3D5A] mb-2">Call Us</h3>
+                        <p class="text-[#666666] mb-4">Speak directly with our team</p>
+                        <a href="tel:+447405587492" class="text-[#2E8BC0] font-medium hover:text-[#1B6F91] transition-colors">
+                            +44 7405587492
+                        </a>
+                    </div>
+
+                    <div class="text-center p-8  rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
+                        <div class="w-16 h-16 bg-[#2E8BC0] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="mail" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#1C3D5A] mb-2">Email Us</h3>
+                        <p class="text-[#666666] mb-4">Send us your project details</p>
+                        <a href="mailto:info@tidalbuildingservices.com" class="text-[#2E8BC0] font-medium hover:text-[#1B6F91] transition-colors">
+                            info@tidalbuildingservices.com
+                        </a>
+                    </div>
+
+                    <div class="text-center p-8  rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
+                        <div class="w-16 h-16 bg-[#2E8BC0] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="map-pin" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#1C3D5A] mb-2">Visit Us</h3>
+                        <p class="text-[#666666] mb-4">Our office location</p>
+                        <p class="text-[#2E8BC0] font-medium">
+                            11A, Cedarway<br>
+                            Slough SL3 7JX
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form and Info Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div>
+                        <div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+                            <h2 class="text-3xl font-bold text-[#1C3D5A] mb-6">Send Us a Message</h2>
+                            
+                            <form id="contact-form" class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="firstName" class="block text-sm font-medium text-[#1C3D5A] mb-2">First Name *</label>
+                                        <input 
+                                            type="text" 
+                                            id="firstName" 
+                                            name="firstName" 
+                                            required 
+                                            class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#2E8BC0] focus:border-transparent transition-colors"
+                                            placeholder="John"
+                                        >
+                                    </div>
+                                    <div>
+                                        <label for="lastName" class="block text-sm font-medium text-[#1C3D5A] mb-2">Last Name *</label>
+                                        <input 
+                                            type="text" 
+                                            id="lastName" 
+                                            name="lastName" 
+                                            required 
+                                            class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#2E8BC0] focus:border-transparent transition-colors"
+                                            placeholder="Doe"
+                                        >
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-[#1C3D5A] mb-2">Email Address *</label>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email" 
+                                        required 
+                                        class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#2E8BC0] focus:border-transparent transition-colors"
+                                        placeholder="john.doe@example.com"
+                                    >
+                                </div>
+                                
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-[#1C3D5A] mb-2">Phone Number</label>
+                                    <input 
+                                        type="tel" 
+                                        id="phone" 
+                                        name="phone" 
+                                        class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#2E8BC0] focus:border-transparent transition-colors"
+                                        placeholder="+44 1234 567890"
+                                    >
+                                </div>
+                                
+                                <div>
+                                    <label for="service" class="block text-sm font-medium text-[#1C3D5A] mb-2">Service Required</label>
+                                    <select 
+                                        id="service" 
+                                        name="service" 
+                                        class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#2E8BC0] focus:border-transparent transition-colors"
+                                    >
+                                        <option value="">Select a service</option>
+                                        <optgroup label="Construction & Building">
+                                            <option value="new-builds">New Builds</option>
+                                            <option value="loft-conversions">Loft Conversions</option>
+                                            <option value="side-extensions">Side Extensions</option>
+                                            <option value="bedroom-modifications">Bedroom Modifications</option>
+                                        </optgroup>
+                                        <optgroup label="Structural & Masonry">
+                                            <option value="brick-works">Brick Works</option>
+                                            <option value="concrete-pouring">Concrete Pouring</option>
+                                            <option value="rendering">Rendering</option>
+                                            <option value="skimming">Skimming & Plastering</option>
+                                            <option value="windows-doors">Window & Door Installations</option>
+                                        </optgroup>
+                                        <optgroup label="Interior Services">
+                                            <option value="tiling-flooring">Tiling & Flooring</option>
+                                            <option value="painting">Painting & Decorating</option>
+                                            <option value="wall-decor">Wall Decoration</option>
+                                        </optgroup>
+                                        <optgroup label="Mechanical Services">
+                                            <option value="plumbing">Plumbing Services</option>
+                                            <option value="electrics">Electrical Work</option>
+                                        </optgroup>
+                                        <optgroup label="External & Landscaping">
+                                            <option value="driveways">Driveways & Patios</option>
+                                            <option value="gardening">Gardening & Landscaping</option>
+                                        </optgroup>
+                                        <optgroup label="Additional Services">
+                                            <option value="property-maintenance">Property Maintenance</option>
+                                            <option value="renovations">Property Renovations</option>
+                                            <option value="design-planning">Design & Planning</option>
+                                            <option value="consultation">Free Consultation</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label for="budget" class="block text-sm font-medium text-[#1C3D5A] mb-2">Estimated Budget</label>
+                                    <select 
+                                        id="budget" 
+                                        name="budget" 
+                                        class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#2E8BC0] focus:border-transparent transition-colors"
+                                    >
+                                        <option value="">Select budget range</option>
+                                        <option value="under-1k">Under £1,000</option>
+                                        <option value="1k-5k">£1,000 - £5,000</option>
+                                        <option value="5k-10k">£5,000 - £10,000</option>
+                                        <option value="10k-25k">£10,000 - £25,000</option>
+                                        <option value="25k-50k">£25,000 - £50,000</option>
+                                        <option value="over-50k">Over £50,000</option>
+                                        <option value="discuss">Prefer to discuss</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-[#1C3D5A] mb-2">Project Details *</label>
+                                    <textarea 
+                                        id="message" 
+                                        name="message" 
+                                        rows="5" 
+                                        required
+                                        class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#2E8BC0] focus:border-transparent transition-colors resize-none"
+                                        placeholder="Please describe your project, timeline, and any specific requirements..."
+                                    ></textarea>
+                                </div>
+
+                                <div class="flex items-start space-x-3">
+                                    <input 
+                                        type="checkbox" 
+                                        id="consent" 
+                                        name="consent" 
+                                        required
+                                        class="mt-1 w-4 h-4 text-[#2E8BC0] border-gray-300 rounded focus:ring-[#2E8BC0] focus:ring-2"
+                                    >
+                                    <label for="consent" class="text-sm text-[#666666] leading-relaxed">
+                                        I consent to Tidal Building Services storing my information and contacting me about my inquiry. *
+                                    </label>
+                                </div>
+                                
+                                <button 
+                                    type="submit" 
+                                    class="w-full bg-[#2E8BC0] hover:bg-[#1B6F91] text-white py-4 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl font-medium text-lg"
+                                >
+                                    Send Message & Get Free Quote
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="space-y-8">
+                        <div>
+                            <h2 class="text-3xl font-bold text-[#1C3D5A] mb-6">Get In Touch</h2>
+                            <p class="text-lg text-[#666666] mb-8 leading-relaxed">
+                                We're committed to providing exceptional service from your first inquiry through project completion. 
+                                Our experienced team is ready to discuss your construction needs and provide expert guidance.
+                            </p>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4 p-6 bg-[#F5F1E6] rounded-xl">
+                                <div class="w-12 h-12 bg-[#2E8BC0] rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-[#1C3D5A] mb-2">Our Office</h3>
+                                    <p class="text-[#666666] leading-relaxed">
+                                        11A, Cedarway<br>
+                                        Slough SL3 7JX<br>
+                                        United Kingdom
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4 p-6 bg-[#F5F1E6] rounded-xl">
+                                <div class="w-12 h-12 bg-[#2E8BC0] rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="phone" class="w-6 h-6 text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-[#1C3D5A] mb-2">Phone</h3>
+                                    <p class="text-[#666666] mb-1">Primary: 
+                                        <a href="tel:+447405587492" class="text-[#2E8BC0] hover:text-[#1B6F91] transition-colors">
+                                            +44 7405587492
+                                        </a>
+                                    </p>
+                                    <p class="text-sm text-[#666666]">Available 24/7 for emergencies</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4 p-6 bg-[#F5F1E6] rounded-xl">
+                                <div class="w-12 h-12 bg-[#2E8BC0] rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="mail" class="w-6 h-6 text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-[#1C3D5A] mb-2">Email</h3>
+                                    <p class="text-[#666666] mb-1">
+                                        <a href="mailto:info@tidalbuildingservices.com" class="text-[#2E8BC0] hover:text-[#1B6F91] transition-colors">
+                                            info@tidalbuildingservices.com
+                                        </a>
+                                    </p>
+                                    <p class="text-sm text-[#666666]">We respond within 24 hours</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4 p-6 bg-[#F5F1E6] rounded-xl">
+                                <div class="w-12 h-12 bg-[#2E8BC0] rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="clock" class="w-6 h-6 text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-[#1C3D5A] mb-2">Business Hours</h3>
+                                    <div class="space-y-1 text-[#666666] text-sm">
+                                        <div class="flex justify-between">
+                                            <span>Monday - Friday:</span>
+                                            <span>8:00 AM - 6:00 PM</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span>Saturday:</span>
+                                            <span>9:00 AM - 4:00 PM</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span>Sunday:</span>
+                                            <span>Emergency Only</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-[#2E8BC0] to-[#155187] p-8 rounded-2xl text-white">
+                            <h3 class="text-xl font-bold mb-4">Why Choose Us?</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <i data-lucide="check" class="w-4 h-4 mr-2 text-white"></i>
+                                    <span class="text-sm">Free, no-obligation quotes</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-lucide="check" class="w-4 h-4 mr-2 text-white"></i>
+                                    <span class="text-sm">15+ years of experience</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-lucide="check" class="w-4 h-4 mr-2 text-white"></i>
+                                    <span class="text-sm">Fully insured and qualified</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-lucide="check" class="w-4 h-4 mr-2 text-white"></i>
+                                    <span class="text-sm">100% customer satisfaction</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-20 bg-[#F5F1E6]">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-[#1C3D5A] mb-4">
+                        Frequently Asked Questions
+                    </h2>
+                    <p class="text-lg text-[#666666]">
+                        Quick answers to common questions about our services and process.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="faq-item bg-white rounded-xl shadow-sm overflow-hidden">
+                        <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <span class="font-semibold text-[#1C3D5A]">How do I get a free quote?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-[#666666] transition-transform"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-4">
+                            <p class="text-[#666666] leading-relaxed">
+                                Simply fill out our contact form above, call us, or send us an email with your project details. 
+                                We'll schedule a convenient time to visit your property and provide a detailed, written quote within 48 hours.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-xl shadow-sm overflow-hidden">
+                        <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <span class="font-semibold text-[#1C3D5A]">Are you fully insured?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-[#666666] transition-transform"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-4">
+                            <p class="text-[#666666] leading-relaxed">
+                                Yes, we carry comprehensive public liability insurance and all our work is covered by our guarantee. 
+                                We can provide insurance certificates upon request.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-xl shadow-sm overflow-hidden">
+                        <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <span class="font-semibold text-[#1C3D5A]">How long does a typical project take?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-[#666666] transition-transform"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-4">
+                            <p class="text-[#666666] leading-relaxed">
+                                Project timelines vary depending on the scope of work. Small jobs may take 1-3 days, while larger renovations 
+                                can take several weeks. We provide accurate timeframes in our quotes and keep you updated throughout the project.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-xl shadow-sm overflow-hidden">
+                        <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                            <span class="font-semibold text-[#1C3D5A]">Do you offer emergency services?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-[#666666] transition-transform"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-4">
+                            <p class="text-[#666666] leading-relaxed">
+                                Yes, we provide 24/7 emergency services for urgent issues like plumbing leaks, structural damage, 
+                                or safety concerns. Contact us immediately for emergency situations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1C3D5A] text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="lg:col-span-2">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">
+                            Tidal Building Services
+                        </h3>
+                        <p class="text-white/80 mb-4">
+                            tidalbuildingservices.ltd
+                        </p>
+                        <p class="text-white/90 leading-relaxed">
+                            Unmatched quality at affordable prices. We are your everyday partner 
+                            for all construction and building service needs.
+                        </p>
+                    </div>
+
+                    <div class="mb-6">
+                        <p class="text-white/80 mb-4">
+                            Follow us on the below platforms to support us with valuable reviews:
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/profile.php?id=61578989883464" aria-label="Facebook" class="w-10 h-10 bg-[#2E8BC0] rounded-full flex items-center justify-center hover:bg-[#1B6F91] transition-colors duration-200">
+                                <i data-lucide="facebook" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" aria-label="Twitter" class="w-10 h-10 bg-[#2E8BC0] rounded-full flex items-center justify-center hover:bg-[#1B6F91] transition-colors duration-200">
+                                <i data-lucide="twitter" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" aria-label="Instagram" class="w-10 h-10 bg-[#2E8BC0] rounded-full flex items-center justify-center hover:bg-[#1B6F91] transition-colors duration-200">
+                                <i data-lucide="instagram" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" aria-label="LinkedIn" class="w-10 h-10 bg-[#2E8BC0] rounded-full flex items-center justify-center hover:bg-[#1B6F91] transition-colors duration-200">
+                                <i data-lucide="linkedin" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Explore Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Explore Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">Our Services</a></li>
+                        <li><a href="about.html" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">About Us</a></li>
+                        <li><a href="portfolio.html" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">Portfolio</a></li>
+                        <li><a href="contact.html" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">Contact Us</a></li>
+                        <li><a href="privacy-policy.html" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Contact Us</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-[#2E8BC0] mt-1 flex-shrink-0"></i>
+                            <p class="text-white/80">
+                                11A, Cedarway<br>
+                                Slough SL3 7JX
+                            </p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-[#2E8BC0] flex-shrink-0"></i>
+                            <a href="mailto:info@tidalbuildingservices.com" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">
+                                info@tidalbuildingservices.com
+                            </a>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-[#2E8BC0] flex-shrink-0"></i>
+                            <a href="tel:+447405587492" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">
+                                +44 7405587492
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-white/80 text-sm">
+                    Copyright ©2024 | Developed by BIZiWEB
+                </p>
+                <p class="text-white/70 text-sm mt-2 md:mt-0">
+                    Made with ❤️ in the UK
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

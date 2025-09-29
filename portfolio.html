@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - Tidal Building Services</title>
+<meta name="description" content="View our portfolio of completed construction projects showcasing quality craftsmanship and attention to detail.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<link rel="stylesheet" href="styles.css">
+<script>
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                primary: '#1C3D5A',
+                secondary: '#F5F1E6',
+                accent: '#2E8BC0',
+                muted: '#666666'
+            }
+        }
+    }
+}
+</script>
+</head>
+<body>
+<!-- Header -->
+<header class="bg-[#1C3D5A] shadow-lg fixed w-full top-0 z-50 border-b border-white/10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center py-3">
+<div class="flex items-center">
+<a href="index.html" class="flex items-center space-x-3">
+<img src="assets/tidal-logo-white.png" alt="Tidal Building Services" class="h-12 w-auto">
+</a>
+</div>
+<nav class="hidden md:flex items-center space-x-1">
+<a href="index.html" class="relative px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-lg group">Home</a>
+<a href="services.html" class="relative px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-lg group">Services</a>
+<a href="portfolio.html" class="relative px-4 py-2 text-white bg-white/10 rounded-lg group">Portfolio</a>
+<a href="about.html" class="relative px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-lg group">About</a>
+<a href="contact.html" class="relative px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-lg group">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<a href="contact.html">
+<button class="hidden md:inline-flex bg-[#2E8BC0] hover:bg-[#1B6F91] text-white px-6 py-2 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200">
+Get Quote
+</button>
+</a>
+<div class="md:hidden">
+<button id="mobile-menu-btn" class="text-white hover:text-[#2E8BC0] hover:bg-white/10 p-2 rounded-lg">
+<i data-lucide="menu" class="w-6 h-6"></i>
+</button>
+</div>
+</div>
+</div>
+<div id="mobile-menu" class="hidden md:hidden py-4 border-t border-white/10">
+<div class="space-y-2">
+<a href="index.html" class="block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-lg">Home</a>
+<a href="services.html" class="block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-lg">Services</a>
+<a href="portfolio.html" class="block px-4 py-3 text-white bg-white/10 rounded-lg">Portfolio</a>
+<a href="about.html" class="block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-lg">About</a>
+<a href="contact.html" class="block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-lg">Contact</a>
+<div class="pt-2 border-t border-white/10 mt-4">
+<a href="contact.html">
+<button class="w-full bg-[#2E8BC0] hover:bg-[#1B6F91] text-white py-3 rounded-lg">Get Quote</button>
+</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<!-- Hero Section -->
+<main class="pt-20">
+<section class="pt-20 bg-gradient-to-br from-[#F5F1E6] via-white to-[#F5F1E6]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1C3D5A] mb-6">Our Portfolio</h1>
+<p class="text-xl text-[#666666] max-w-3xl mx-auto">
+Explore our extensive portfolio of completed projects showcasing our commitment to quality craftsmanship and attention to detail.
+</p>
+</div>
+</section>
+
+<!-- Filter Buttons -->
+<section class="py-8 bg-white border-b border-gray-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-wrap justify-center gap-4">
+<button class="filter-btn active" data-filter="all">All Projects</button>
+<button class="filter-btn" data-filter="bathroom">Bathroom</button>
+<button class="filter-btn" data-filter="rendering">External Rendering</button>
+<button class="filter-btn" data-filter="garden">Gardens</button>
+<button class="filter-btn" data-filter="tiling">Floor</button>
+<button class="filter-btn" data-filter="skimming">Skimming</button>
+<button class="filter-btn" data-filter="painting">Painting</button>
+<button class="filter-btn" data-filter="exterior">Exterior</button>
+</div>
+</div>
+</section>
+
+<!-- All Projects Grid -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="all-projects-grid">
+
+      <!-- Bathroom Projects -->
+      <!-- Sink -->
+    <div class="portfolio-item" data-category="bathroom">
+      <div class="group cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <div class="relative w-full h-80 overflow-hidden">
+          <img src="images/portfolio/bathroom/sink1.jpg" alt="Modern Sink" class="w-full h-full object-cover slider-image">
+          <img src="images/portfolio/bathroom/sink2.jpg" alt="Aesthetic Sink" class="w-full h-full object-cover slider-image hidden">
+          <img src="images/portfolio/bathroom/sink3.jpg" alt="Contemporary Sink" class="w-full h-full object-cover slider-image hidden">
+          <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full prev-btn">&#10094;</button>
+          <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full next-btn">&#10095;</button>
+        </div>
+        <div class="p-6">
+          <span class="inline-block px-3 py-1 bg-[#E6F3F9] text-[#2E8BC0] text-sm font-medium rounded-full mb-3">Bathroom</span>
+          <h3 class="text-xl font-bold text-[#1C3D5A] mb-2">Modern & Aesthetic Sink</h3>
+          <p class="text-[#666666] text-sm">Stylish modern sinks designed for contemporary and aesthetic bathrooms.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bath Tub -->
+    <div class="portfolio-item" data-category="bathroom">
+      <div class="group cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <div class="relative w-full h-80 overflow-hidden">
+          <img src="images/portfolio/bathroom/bath1.jpg" alt="Modern Bath Tub" class="w-full h-full object-cover slider-image">
+          <img src="images/portfolio/bathroom/bath2.jpg" alt="Luxury Bath Tub" class="w-full h-full object-cover slider-image hidden">
+          <img src="images/portfolio/bathroom/bath3.jpg" alt="Luxury Bath Tub" class="w-full h-full object-cover slider-image hidden">
+          <img src="images/portfolio/bathroom/bath4.jpg" alt="Luxury Bath Tub" class="w-full h-full object-cover slider-image hidden">
+          <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full prev-btn">&#10094;</button>
+          <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full next-btn">&#10095;</button>
+        </div>
+        <div class="p-6">
+          <span class="inline-block px-3 py-1 bg-[#E6F3F9] text-[#2E8BC0] text-sm font-medium rounded-full mb-3">Bathroom</span>
+          <h3 class="text-xl font-bold text-[#1C3D5A] mb-2">Modern Bath Tub</h3>
+          <p class="text-[#666666] text-sm">Luxury and aesthetic bath tubs for modern bathrooms.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shower -->
+    <div class="portfolio-item" data-category="bathroom">
+      <div class="group cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <div class="relative w-full h-80 overflow-hidden">
+          <img src="images/portfolio/bathroom/shower1.jpg" alt="Modern Shower" class="w-full h-full object-cover slider-image">
+          <img src="images/portfolio/bathroom/shower2.jpg" alt="Luxury Shower" class="w-full h-full object-cover slider-image hidden">
+          <img src="images/portfolio/bathroom/shower3.jpg" alt="Luxury Shower" class="w-full h-full object-cover slider-image hidden">
+          <img src="images/portfolio/bathroom/shower4.jpg" alt="Luxury Shower" class="w-full h-full object-cover slider-image hidden">
+          <img src="images/portfolio/bathroom/shower5.jpg" alt="Luxury Shower" class="w-full h-full object-cover slider-image hidden">
+          <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full prev-btn">&#10094;</button>
+          <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full next-btn">&#10095;</button>
+        </div>
+        <div class="p-6">
+          <span class="inline-block px-3 py-1 bg-[#E6F3F9] text-[#2E8BC0] text-sm font-medium rounded-full mb-3">Bathroom</span>
+          <h3 class="text-xl font-bold text-[#1C3D5A] mb-2">Modern Shower</h3>
+          <p class="text-[#666666] text-sm">Stylish and functional showers for contemporary bathrooms.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toilet -->
+    <div class="portfolio-item" data-category="bathroom">
+      <div class="group cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <div class="relative w-full h-80 overflow-hidden">
+          <img src="images/portfolio/bathroom/toilet1.jpg" alt="Modern Toilet" class="w-full h-full object-cover slider-image">
+          <img src="images/portfolio/bathroom/toilet2.jpg" alt="Luxury Toilet" class="w-full h-full object-cover slider-image hidden">
+          <img src="images/portfolio/bathroom/toilet3.jpg" alt="Luxury Toilet" class="w-full h-full object-cover slider-image hidden">
+          <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full prev-btn">&#10094;</button>
+          <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full next-btn">&#10095;</button>
+        </div>
+        <div class="p-6">
+          <span class="inline-block px-3 py-1 bg-[#E6F3F9] text-[#2E8BC0] text-sm font-medium rounded-full mb-3">Bathroom</span>
+          <h3 class="text-xl font-bold text-[#1C3D5A] mb-2">Modern Toilet</h3>
+          <p class="text-[#666666] text-sm">High-quality toilets designed for comfort and modern aesthetics.</p>
+        </div>
+      </div>
+    </div>
+
+
+      <!-- External Rendering -->
+      <div class="portfolio-item" data-category="rendering">
+        <div class="group cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+          <div class="relative w-full h-80 overflow-hidden">
+            <img src="images/portfolio/rendering/render1.jpg" alt="Smooth External Rendering" class="w-full h-full object-cover slider-image">
+            <img src="images/portfolio/rendering/render2.jpg" alt="Insulated Rendering" class="w-full h-full object-cover slider-image hidden">
+            <img src="images/portfolio/rendering/render3.jpg" alt="Textured Rendering" class="w-full h-full object-cover slider-image hidden">
+            <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full prev-btn">&#10094;</button>
+            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full next-btn">&#10095;</button>
+          </div>
+          <div class="p-6">
+            <span class="inline-block px-3 py-1 bg-[#E6F3F9] text-[#2E8BC0] text-sm font-medium rounded-full mb-3">External Rendering</span>
+            <h3 class="text-xl font-bold text-[#1C3D5A] mb-2">Smooth & Insulated Rendering</h3>
+            <p class="text-[#666666] text-sm">Professional external rendering with smooth finish, insulation, and weather resistance for modern buildings.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gardens -->
+      <!-- Contemporary Family Garden -->
+    <div class="portfolio-item" data-category="garden">
+      <div class="group cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <div class="relative w-full h-80 overflow-hidden">
+          <img src="images/portfolio/gardens/family1.jpg" alt="Contemporary Family Garden 1" class="w-full h-full object-cover slider-image">
+          <img src="images/portfolio/gardens/family2.jpg" alt="Contemporary Family Garden 2" class="w-full h-full object-cover slider-image hidden">
+          <img src="images/portfolio/gardens/family3.jpg" alt="Contemporary Family Garden 2" class="w-full h-full object-cover slider-image hidden">
+          <img src="images/portfolio/gardens/family4.jpg" alt="Contemporary Family Garden 2" class="w-full h-full object-cover slider-image hidden">
+          <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full prev-btn">&#10094;</button>
+          <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full next-btn">&#10095;</button>
+        </div>
+        <div class="p-6">
+          <span class="inline-block px-3 py-1 bg-[#E6F3F9] text-[#2E8BC0] text-sm font-medium rounded-full mb-3">Gardens</span>
+          <h3 class="text-xl font-bold text-[#1C3D5A] mb-2">Contemporary Family Garden</h3>
+          <p class="text-[#666666] text-sm">Modern design with family-friendly spaces, play areas, and seating for gatherings.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Urban Courtyard Garden -->
+    <div class="portfolio-item" data-category="garden">
+      <div class="group cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <div class="relative w-full h-80 overflow-hidden">
+          <img src="images/portfolio/gardens/courtyard1.jpg" alt="Urban Courtyard Garden 1" class="w-full h-full object-cover slider-image">
+          <img src="images/portfolio/gardens/courtyard2.jpg" alt="Urban Courtyard Garden 2" class="w-full h-full object-cover slider-image hidden">
+          <img src="images/portfolio/gardens/courtyard3.jpg" alt="Urban Courtyard Garden 2" class="w-full h-full object-cover slider-image hidden">
+          <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full prev-btn">&#10094;</button>
+          <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full next-btn">&#10095;</button>
+        </div>
+        <div class="p-6">
+          <span class="inline-block px-3 py-1 bg-[#E6F3F9] text-[#2E8BC0] text-sm font-medium rounded-full mb-3">Gardens</span>
+          <h3 class="text-xl font-bold text-[#1C3D5A] mb-2">Urban Courtyard Garden</h3>
+          <p class="text-[#666666] text-sm">Compact urban gardens with vertical greenery, paving, and cozy seating areas.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Outdoor Entertainment Garden -->
+    <div class="portfolio-item" data-category="garden">
+      <div class="group cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <div class="relative w-full h-80 overflow-hidden">
+          <img src="images/portfolio/gardens/entertainment1.jpg" alt="Outdoor Entertainment Garden 1" class="w-full h-full object-cover slider-image">
+          <img src="images/portfolio/gardens/entertainment2.jpg" alt="Outdoor Entertainment Garden 2" class="w-full h-full object-cover slider-image hidden">
+          <img src="images/portfolio/gardens/entertainment3.jpg" alt="Outdoor Entertainment Garden 3" class="w-full h-full object-cover slider-image hidden">
+          <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full prev-btn">&#10094;</button>
+          <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full next-btn">&#10095;</button>
+        </div>
+        <div class="p-6">
+          <span class="inline-block px-3 py-1 bg-[#E6F3F9] text-[#2E8BC0] text-sm font-medium rounded-full mb-3">Gardens</span>
+          <h3 class="text-xl font-bold text-[#1C3D5A] mb-2">Outdoor Entertainment Garden</h3>
+          <p class="text-[#666666] text-sm">Spaces designed for hosting, with patios, seating, BBQ areas, and lighting for evening events.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modern Minimalist Garden -->
+    <div class="portfolio-item" data-category="garden">
+      <div class="group cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+        <div class="relative w-full h-80 overflow-hidden">
+          <img src="images/portfolio/gardens/minimalist1.jpg" alt="Modern Minimalist Garden 1" class="w-full h-full object-cover slider-image">
+          <img src="images/portfolio/gardens/minimalist2.jpg" alt="Modern Minimalist Garden 2" class="w-full h-full object-cover slider-image hidden">
+          <img src="images/portfolio/gardens/minimalist3.jpg" alt="Modern Minimalist Garden 2" class="w-full h-full object-cover slider-image hidden">
+          <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full prev-btn">&#10094;</button>
+          <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full next-btn">&#10095;</button>
+        </div>
+        <div class="p-6">
+          <span class="inline-block px-3 py-1 bg-[#E6F3F9] text-[#2E8BC0] text-sm font-medium rounded-full mb-3">Gardens</span>
+          <h3 class="text-xl font-bold text-[#1C3D5A] mb-2">Modern Minimalist Garden</h3>
+          <p class="text-[#666666] text-sm">Minimalistic layouts with clean lines, geometric planting, and serene outdoor spaces.</p>
+        </div>
+      </div>
+    </div>
+    <!--Floor-->
+    <!--Wood Floor-->
+      <div class="portfolio-item" data-category="tiling">
+        <div class="group cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+          <div class="relative w-full h-80 overflow-hidden">
+            <img src="images/portfolio/floor/wood1.jpeg" alt="Wood Floor" class="w-full h-full object-cover slider-image">
+            <img src="images/portfolio/floor/wood2.jpg" alt="Luxury Wood Floor" class="w-full h-full object-cover slider-image hidden">
+            <img src="images/portfolio/floor/wood3.jpeg" alt="Luxury Wood Floor" class="w-full h-full object-cover slider-image hidden">
+            <img src="images/portfolio/floor/wood4.jpeg" alt="Luxury Wood Floor" class="w-full h-full object-cover slider-image hidden">
+            <img src="images/portfolio/floor/wood5.jpg" alt="Luxury Wood Floor" class="w-full h-full object-cover slider-image hidden">
+            <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full prev-btn">&#10094;</button>
+            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full next-btn">&#10095;</button>
+          </div>
+          <div class="p-6">
+            <span class="inline-block px-3 py-1 bg-[#E6F3F9] text-[#2E8BC0] text-sm font-medium rounded-full mb-3">Floor</span>
+            <h3 class="text-xl font-bold text-[#1C3D5A] mb-2">Wood Flooring</h3>
+            <p class="text-[#666666] text-sm">Elegant wood flooring for modern interiors with aesthetic finishes.</p>
+          </div>
+        </div>
+      </div>
+            <!-- Tile Flooring -->
+      <div class="portfolio-item" data-category="tiling">
+        <div class="group cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+          <div class="relative w-full h-80 overflow-hidden">
+            <img src="images/portfolio/floor/tile1.jpeg" alt="Tiles Floor" class="w-full h-full object-cover slider-image">
+            <img src="images/portfolio/floor/tile2.jpg" alt="Patterned Tiles" class="w-full h-full object-cover slider-image hidden">
+            <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full prev-btn">&#10094;</button>
+            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full next-btn">&#10095;</button>
+          </div>
+          <div class="p-6">
+            <span class="inline-block px-3 py-1 bg-[#E6F3F9] text-[#2E8BC0] text-sm font-medium rounded-full mb-3">Floor</span>
+            <h3 class="text-xl font-bold text-[#1C3D5A] mb-2">Tile Flooring</h3>
+            <p class="text-[#666666] text-sm">Modern and stylish tiles for kitchens, bathrooms, and living spaces.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carpet Flooring -->
+      <div class="portfolio-item" data-category="tiling">
+        <div class="group cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+          <div class="relative w-full h-80 overflow-hidden">
+            <img src="images/portfolio/floor/carpet1.jpg" alt="Carpet Floor" class="w-full h-full object-cover slider-image">
+            <img src="images/portfolio/floor/carpet2.jpg" alt="Luxury Carpet" class="w-full h-full object-cover slider-image hidden">
+            <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full prev-btn">&#10094;</button>
+            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full next-btn">&#10095;</button>
+          </div>
+          <div class="p-6">
+            <span class="inline-block px-3 py-1 bg-[#E6F3F9] text-[#2E8BC0] text-sm font-medium rounded-full mb-3">Floor</span>
+            <h3 class="text-xl font-bold text-[#1C3D5A] mb-2">Carpet Flooring</h3>
+            <p class="text-[#666666] text-sm">Comfortable and aesthetic carpet flooring for modern interiors.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skimming -->
+      <div class="portfolio-item" data-category="skimming">
+        <div class="group cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+          <div class="relative w-full h-80 overflow-hidden">
+            <img src="images/portfolio/skimming/skim1.jpg" alt="Interior Skimming" class="w-full h-full object-cover slider-image">
+            <img src="images/portfolio/skimming/skim2.jpg" alt="Exterior Skimming" class="w-full h-full object-cover slider-image hidden">
+            <img src="images/portfolio/skimming/skim3.jpg" alt="Exterior Skimming" class="w-full h-full object-cover slider-image hidden">
+            <img src="images/portfolio/skimming/skim4.jpg" alt="Exterior Skimming" class="w-full h-full object-cover slider-image hidden">
+            <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full prev-btn">&#10094;</button>
+            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full next-btn">&#10095;</button>
+          </div>
+          <div class="p-6">
+            <span class="inline-block px-3 py-1 bg-[#E6F3F9] text-[#2E8BC0] text-sm font-medium rounded-full mb-3">Skimming</span>
+            <h3 class="text-xl font-bold text-[#1C3D5A] mb-2">Interior & Exterior Skimming</h3>
+            <p class="text-[#666666] text-sm">Professional wall skimming for smooth, modern interiors and durable exteriors.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Painting: Interior -->
+      <div class="portfolio-item" data-category="painting">
+        <div class="group cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+          <div class="relative w-full h-80 overflow-hidden">
+            <img src="images/portfolio/painting/interior1.jpg" alt="Interior Painting" class="w-full h-full object-cover slider-image">
+            <img src="images/portfolio/painting/interior2.jpeg" alt="Color Combination" class="w-full h-full object-cover slider-image hidden">
+            <img src="images/portfolio/painting/interior3.jpeg" alt="Color Combination" class="w-full h-full object-cover slider-image hidden">
+            <img src="images/portfolio/painting/interior4.jpg" alt="Color Combination" class="w-full h-full object-cover slider-image hidden">
+            <img src="images/portfolio/painting/interior5.jpeg" alt="Color Combination" class="w-full h-full object-cover slider-image hidden">
+            <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full prev-btn">&#10094;</button>
+            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full next-btn">&#10095;</button>
+          </div>
+          <div class="p-6">
+            <span class="inline-block px-3 py-1 bg-[#E6F3F9] text-[#2E8BC0] text-sm font-medium rounded-full mb-3">Painting</span>
+            <h3 class="text-xl font-bold text-[#1C3D5A] mb-2">Interior Painting</h3>
+            <p class="text-[#666666] text-sm">Aesthetic color combinations for modern interiors with attention to detail.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Painting: Exterior -->
+      <div class="portfolio-item" data-category="painting">
+        <div class="group cursor-pointer bg-white rounded-2xl  overflow-hidden hover:shadow-2xl transition-all duration-300">
+          <div class="relative w-full h-80 overflow-hidden">
+            <img src="images/portfolio/painting/exterior1.jpg" alt="Exterior Painting" class="w-full h-full object-cover slider-image">
+            <img src="images/portfolio/painting/exterior2.jpg" alt="Weather Resistant Painting" class="w-full h-full object-cover slider-image hidden">
+            <img src="images/portfolio/painting/exterior3.jpg" alt="Weather Resistant Painting" class="w-full h-full object-cover slider-image hidden">
+            <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full prev-btn">&#10094;</button>
+            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full next-btn">&#10095;</button>
+          </div>
+          <div class="p-6">
+            <span class="inline-block px-3 py-1 bg-[#E6F3F9] text-[#2E8BC0] text-sm font-medium rounded-full mb-3">Painting</span>
+            <h3 class="text-xl font-bold text-[#1C3D5A] mb-2">Exterior Painting</h3>
+            <p class="text-[#666666] text-sm">Weather-resistant exterior painting with aesthetic color combinations for modern homes.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Exterior: Driveway -->
+      <div class="portfolio-item" data-category="exterior">
+        <div class="group cursor-pointer bg-white rounded-2xl  overflow-hidden hover:shadow-2xl transition-all duration-300">
+          <div class="relative w-full h-80 overflow-hidden">
+            <img src="images/portfolio/exterior/driveway1.jpg" alt="Driveway" class="w-full h-full object-cover slider-image">
+            <img src="images/portfolio/exterior/driveway2.jpg" alt="Concrete Driveway" class="w-full h-full object-cover slider-image hidden">
+            <img src="images/portfolio/exterior/driveway3.jpg" alt="Concrete Driveway" class="w-full h-full object-cover slider-image hidden">
+            <img src="images/portfolio/exterior/driveway4.jpg" alt="Concrete Driveway" class="w-full h-full object-cover slider-image hidden">
+            <img src="images/portfolio/exterior/driveway5.jpg" alt="Concrete Driveway" class="w-full h-full object-cover slider-image hidden">
+            <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full prev-btn">&#10094;</button>
+            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full next-btn">&#10095;</button>
+          </div>
+          <div class="p-6">
+            <span class="inline-block px-3 py-1 bg-[#E6F3F9] text-[#2E8BC0] text-sm font-medium rounded-full mb-3">Exterior</span>
+            <h3 class="text-xl font-bold text-[#1C3D5A] mb-2">Driveway</h3>
+            <p class="text-[#666666] text-sm">Professional driveway installation with concrete and modern finishes.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Exterior: Patio -->
+      <div class="portfolio-item" data-category="exterior">
+        <div class="group cursor-pointer bg-white rounded-2xl  overflow-hidden hover:shadow-2xl transition-all duration-300">
+          <div class="relative w-full h-80 overflow-hidden">
+            <img src="images/portfolio/exterior/patio1.jpg" alt="Patio" class="w-full h-full object-cover slider-image">
+            <img src="images/portfolio/exterior/patio2.jpg" alt="Outdoor Patio" class="w-full h-full object-cover slider-image hidden">
+            <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full prev-btn">&#10094;</button>
+            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full next-btn">&#10095;</button>
+          </div>
+          <div class="p-6">
+            <span class="inline-block px-3 py-1 bg-[#E6F3F9] text-[#2E8BC0] text-sm font-medium rounded-full mb-3">Exterior</span>
+            <h3 class="text-xl font-bold text-[#1C3D5A] mb-2">Patio</h3>
+            <p class="text-[#666666] text-sm">Modern patio installation with aesthetic and durable outdoor surfaces.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Concrete Filling -->
+<div class="portfolio-item" data-category="exterior">
+  <div class="group cursor-pointer bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+    <div class="relative w-full h-80 overflow-hidden">
+      <img src="images/portfolio/exterior/concrete1.jpg" alt="Concrete Filling 1" class="w-full h-full object-cover slider-image">
+      <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full prev-btn">&#10094;</button>
+      <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white/80 text-[#1C3D5A] p-2 rounded-full next-btn">&#10095;</button>
+    </div>
+    <div class="p-6">
+      <span class="inline-block px-3 py-1 bg-[#E6F3F9] text-[#2E8BC0] text-sm font-medium rounded-full mb-3">Exterior</span>
+      <h3 class="text-xl font-bold text-[#1C3D5A] mb-2">Concrete Filling</h3>
+      <p class="text-[#666666] text-sm">Professional concrete filling services for driveways, patios, and outdoor surfaces with durable, smooth finishes.</p>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+
+
+</main>
+
+<footer class="bg-[#1C3D5A] text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="lg:col-span-2">
+                    <div class="mb-6">
+                        <div class="flex items-center">
+                    <a href="/" class="flex items-center space-x-3">
+                        <img src="assets/tidal-logo-white.png" alt="Tidal Building Services" class="h-16 w-auto">
+                    </a>
+                </div>
+                        <p class="text-white/90 leading-relaxed">
+                            <br>Unmatched quality at affordable prices. We are your everyday partner 
+                            for all construction and building service needs.
+                        </p>
+                    </div>
+
+                    <div class="mb-6">
+                        <p class="text-white/80 mb-4">
+                            Follow us on the below platforms to support us with valuable reviews:
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" aria-label="Facebook" class="w-10 h-10 bg-[#2E8BC0] rounded-full flex items-center justify-center hover:bg-[#1B6F91] transition-colors duration-200">
+                                <i data-lucide="facebook" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" aria-label="Twitter" class="w-10 h-10 bg-[#2E8BC0] rounded-full flex items-center justify-center hover:bg-[#1B6F91] transition-colors duration-200">
+                                <i data-lucide="twitter" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" aria-label="Instagram" class="w-10 h-10 bg-[#2E8BC0] rounded-full flex items-center justify-center hover:bg-[#1B6F91] transition-colors duration-200">
+                                <i data-lucide="instagram" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" aria-label="LinkedIn" class="w-10 h-10 bg-[#2E8BC0] rounded-full flex items-center justify-center hover:bg-[#1B6F91] transition-colors duration-200">
+                                <i data-lucide="linkedin" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Explore Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Explore Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">Our Services</a></li>
+                        <li><a href="about.html" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">About Us</a></li>
+                        <li><a href="portfolio.html" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">Portfolio</a></li>
+                        <li><a href="contact.html" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">Contact Us</a></li>
+                        <li><a href="privacy-policy.html" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">Terms of Service</a></li>
+                      </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Contact Us</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-[#2E8BC0] mt-1 flex-shrink-0"></i>
+                            <p class="text-white/80">
+                                11A, Cedarway<br>
+                                Slough SL3 7JX
+                            </p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-[#2E8BC0] flex-shrink-0"></i>
+                            <a href="mailto:info@tidalbuildingservices.com" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">
+                                info@tidalbuildingservices.com
+                            </a>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-[#2E8BC0] flex-shrink-0"></i>
+                            <a href="tel:+447405587492" class="text-white/80 hover:text-[#2E8BC0] transition-colors duration-200">
+                                +44 7405587492
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-white/80 text-sm">
+                    Copyright ©2024 | Developed by BIZiWEB
+                </p>
+                <p class="text-white/70 text-sm mt-2 md:mt-0">
+                    Made with ❤️ in the UK
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+<style>
+.filter-btn {
+    @apply px-4 py-2 bg-[#E6F3F9] text-[#2E8BC0] border-2 border-[#1C3D5A] rounded-xl transition-all duration-200 hover:bg-[#1C3D5A] hover:text-white;
+}
+.filter-btn.active {
+    @apply bg-[#2E8BC0] text-white border-[#2E8BC0];
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const sliders = document.querySelectorAll(".portfolio-item");
+
+  sliders.forEach((slider) => {
+    const images = slider.querySelectorAll(".slider-image");
+    const prevBtn = slider.querySelector(".prev-btn");
+    const nextBtn = slider.querySelector(".next-btn");
+
+    let currentIndex = 0;
+    let autoSlide;
+
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.classList.toggle("hidden", i !== index);
+      });
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    }
+
+    // Button click handlers
+    if (nextBtn) nextBtn.addEventListener("click", () => {
+      nextImage();
+      restartAutoSlide();
+    });
+    if (prevBtn) prevBtn.addEventListener("click", () => {
+      prevImage();
+      restartAutoSlide();
+    });
+
+    // Auto-slide every 3s
+    function startAutoSlide() {
+      autoSlide = setInterval(nextImage, 5000);
+    }
+
+    function restartAutoSlide() {
+      clearInterval(autoSlide);
+      startAutoSlide();
+    }
+
+    // Init
+    showImage(currentIndex);
+    startAutoSlide();
+  });
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+    initPortfolioFilter();
+    initMobileMenu();
+});
+
+/** Portfolio Filtering + Slider */
+function initPortfolioFilter() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const allItems = document.querySelectorAll('#all-projects-grid .portfolio-item');
+
+    if (!filterButtons.length || !allItems.length) return;
+
+    function initSlider(item) {
+        const images = item.querySelectorAll('.slider-image');
+        if (!images.length) return;
+        let current = 0;
+
+        images.forEach((img, i) => img.classList.toggle('hidden', i !== 0));
+
+        const prevBtn = item.querySelector('.prev-btn');
+        const nextBtn = item.querySelector('.next-btn');
+        if (!prevBtn || !nextBtn) return;
+
+        prevBtn.replaceWith(prevBtn.cloneNode(true));
+        nextBtn.replaceWith(nextBtn.cloneNode(true));
+
+        const newPrev = item.querySelector('.prev-btn');
+        const newNext = item.querySelector('.next-btn');
+
+        newPrev.addEventListener('click', e => {
+            e.stopPropagation();
+            current = (current - 1 + images.length) % images.length;
+            showImage(current, images);
+        });
+
+        newNext.addEventListener('click', e => {
+            e.stopPropagation();
+            current = (current + 1) % images.length;
+            showImage(current, images);
+        });
+
+        function showImage(index, imgs) {
+            imgs.forEach((img, i) => img.classList.toggle('hidden', i !== index));
+        }
+    }
+
+    // Initialize sliders and shuffle items
+    const grid = document.getElementById('all-projects-grid');
+    const itemsArray = Array.from(allItems);
+    itemsArray.sort(() => Math.random() - 0.5); // shuffle
+    itemsArray.forEach(item => grid.appendChild(item));
+    allItems.forEach(item => initSlider(item));
+
+    // Handle filter button clicks
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.dataset.filter;
+
+            allItems.forEach(item => {
+                if (filter === 'all' || item.dataset.category === filter) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+}
+
+/** Mobile Menu Toggle */
+function initMobileMenu() {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (!btn || !menu) return;
+
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+}
+</script>
+</body>
+</html>
